@@ -1,0 +1,27 @@
+﻿@model Core.Entity.Product
+@{
+    ViewBag.Title = "FindProduct";
+}
+
+<h2>FindProduct</h2>
+
+
+<table>
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(x => x.Product_Name)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+
+        <tr>
+            <td>@Html.DisplayFor(o => o.Product_Name)</td>
+        </tr>
+
+    </tbody>
+</table>
+
+
+

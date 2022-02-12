@@ -1,0 +1,23 @@
+﻿@model IEnumerable<Core.Entity.Employee>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(i=>i.Employee_Name)</th>
+        </tr>
+    </thead>
+    @foreach (var i in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(o => i.Employee_Name)
+            </td>
+        </tr>
+    }
+
+</table>

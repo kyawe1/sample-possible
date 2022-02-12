@@ -1,0 +1,27 @@
+﻿@model ConsumerViewModel
+@{
+    ViewBag.Title = "Register";
+}
+
+<h2>Register</h2>
+
+@using (Html.BeginForm("Register", "Customer", FormMethod.Post, new { @class = "m-2" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary()
+    <div class="m-2 form-group">
+        @Html.LabelFor(x => x.Name, new { @class = "form-label" })
+        @Html.TextBoxFor(x => x.Name, new { @placeholder = "Fill Name", @class = "form-control" })
+    </div>
+    <div class="m-2 form-group">
+        @Html.LabelFor(x => x.Address, new { @class = "form-label" })
+        @Html.TextBoxFor(x => x.Address, new { @placeholder = "Fill Address", @class = "form-control" })
+    </div>
+    <div class="m-2 form-group">
+        @Html.LabelFor(x => x.Phone, new { @class = "form-label" })
+        @Html.TextBoxFor(x => x.Phone, new { @placeholder = "Fill Phone", @class = "form-control" })
+    </div>
+    <div class="m-2">
+        <input type="submit" class="btn btn-primary" value="Register" />
+    </div>
+}

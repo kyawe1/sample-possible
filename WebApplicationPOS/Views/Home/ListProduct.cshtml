@@ -1,0 +1,24 @@
+﻿@model IEnumerable<Core.Entity.Product>
+@{
+    ViewBag.Title = "ListProduct";
+}
+
+<h2>ListProduct</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(x=> x.Product_Name)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var i in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(o=> i.Product_Name)</td>
+            </tr>
+        }
+    </tbody>
+</table>
